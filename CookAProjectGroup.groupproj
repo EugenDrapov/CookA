@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{298B4DCF-EC3D-476C-B7C8-282219ED5891}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CookA.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="АРМ Касса\pos.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CookA">
+        <MSBuild Projects="CookA.dproj"/>
+    </Target>
+    <Target Name="CookA:Clean">
+        <MSBuild Projects="CookA.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CookA:Make">
+        <MSBuild Projects="CookA.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pos">
+        <MSBuild Projects="АРМ Касса\pos.dproj"/>
+    </Target>
+    <Target Name="pos:Clean">
+        <MSBuild Projects="АРМ Касса\pos.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pos:Make">
+        <MSBuild Projects="АРМ Касса\pos.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CookA;pos"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CookA:Clean;pos:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CookA:Make;pos:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

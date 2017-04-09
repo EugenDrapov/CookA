@@ -1,0 +1,103 @@
+object FrameCataloges: TFrameCataloges
+  Left = 0
+  Top = 0
+  Width = 180
+  Height = 179
+  TabOrder = 0
+  object sBitBtn2: TsBitBtn
+    Left = 48
+    Top = 26
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionBrand
+    Caption = #1041#1083#1102#1076#1072
+    TabOrder = 1
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn3: TsBitBtn
+    Left = 48
+    Top = 49
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionCalc
+    Caption = #1050#1072#1083#1100#1082#1091#1083#1103#1094#1080#1103
+    TabOrder = 2
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn4: TsBitBtn
+    Left = 48
+    Top = 73
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionClients
+    Caption = #1050#1083#1080#1077#1085#1090#1099
+    TabOrder = 3
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn1: TsBitBtn
+    Left = 48
+    Top = 3
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionFood
+    Caption = #1055#1088#1086#1076#1091#1082#1090#1099
+    TabOrder = 0
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn5: TsBitBtn
+    Left = 48
+    Top = 96
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionWarehouse
+    Caption = #1057#1082#1083#1072#1076#1099
+    TabOrder = 4
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn6: TsBitBtn
+    Left = 48
+    Top = 120
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionDepart
+    Caption = #1055#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1103
+    TabOrder = 5
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sBitBtn7: TsBitBtn
+    Left = 48
+    Top = 144
+    Width = 120
+    Height = 25
+    Cursor = crHandPoint
+    Action = FormMain.ActionFirm
+    Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1080
+    TabOrder = 6
+    Blend = 10
+    Images = FormMain.ImageList1
+    SkinData.SkinSection = 'BUTTON'
+  end
+  object sFrameAdapter1: TsFrameAdapter
+    SkinData.SkinSection = 'GROUPBOX'
+    Left = 8
+    Top = 8
+  end
+end

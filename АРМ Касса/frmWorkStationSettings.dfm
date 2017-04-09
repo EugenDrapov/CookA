@@ -1,0 +1,431 @@
+object FormWorkStationSettings: TFormWorkStationSettings
+  Left = 0
+  Top = 0
+  Caption = 'FormWorkStationSettings'
+  ClientHeight = 445
+  ClientWidth = 578
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -10
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 12
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 578
+    Height = 397
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Align = alClient
+    Caption = 'Panel1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+    object PageControl1: TPageControl
+      Left = 1
+      Top = 1
+      Width = 576
+      Height = 395
+      ActivePage = TabSheet2
+      Align = alClient
+      TabOrder = 0
+      object TabSheet1: TTabSheet
+        Caption = #1054#1089#1085#1086#1074#1085#1099#1077
+        object Label1: TLabel
+          Left = 18
+          Top = 20
+          Width = 89
+          Height = 18
+          Margins.Left = 2
+          Margins.Top = 2
+          Margins.Right = 2
+          Margins.Bottom = 2
+          Caption = #1054#1088#1075#1072#1085#1080#1079#1072#1094#1080#1103
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label2: TLabel
+          Left = 18
+          Top = 71
+          Width = 105
+          Height = 18
+          Margins.Left = 2
+          Margins.Top = 2
+          Margins.Right = 2
+          Margins.Bottom = 2
+          Caption = #1055#1086#1076#1088#1072#1079#1076#1077#1083#1077#1085#1080#1077
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clNavy
+          Font.Height = -15
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object lkDep: TDBLookupComboboxEh
+          Left = 18
+          Top = 93
+          Width = 247
+          Height = 24
+          Margins.Left = 2
+          Margins.Top = 2
+          Margins.Right = 2
+          Margins.Bottom = 2
+          DynProps = <>
+          DataField = ''
+          EditButtons = <>
+          KeyField = 'ID'
+          ListField = 'DESCR'
+          ListSource = DM.DSDepartments
+          TabOrder = 0
+          Visible = True
+        end
+        object lkOrg: TDBLookupComboboxEh
+          Left = 18
+          Top = 42
+          Width = 247
+          Height = 24
+          Margins.Left = 2
+          Margins.Top = 2
+          Margins.Right = 2
+          Margins.Bottom = 2
+          DynProps = <>
+          DataField = ''
+          EditButtons = <>
+          KeyField = 'ID'
+          ListField = 'DESCR'
+          ListSource = DM.DSCompany
+          TabOrder = 1
+          Visible = True
+        end
+      end
+      object TabSheet2: TTabSheet
+        Caption = #1055#1086#1076#1082#1083#1102#1095#1077#1085#1080#1077' '#1082' '#1050#1050#1052
+        ImageIndex = 1
+        object PanelPrinters: TPanel
+          Left = 0
+          Top = 0
+          Width = 568
+          Height = 364
+          Align = alClient
+          Caption = 'PanelPrinters'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          ShowCaption = False
+          TabOrder = 0
+          object rgrpPrinterMode: TRadioGroup
+            Left = 1
+            Top = 1
+            Width = 566
+            Height = 117
+            Align = alTop
+            Caption = #1056#1077#1078#1080#1084' '#1088#1072#1073#1086#1090#1099' '#1089' '#1087#1088#1080#1085#1090#1077#1088#1086#1084
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ItemIndex = 0
+            Items.Strings = (
+              #1064#1090#1088#1080#1093'-'#1052
+              'ESC/POS Windows '#1087#1088#1080#1085#1090#1077#1088
+              'GDI Windows '#1087#1088#1080#1085#1090#1077#1088)
+            ParentFont = False
+            TabOrder = 0
+          end
+          object StaticText1: TStaticText
+            AlignWithMargins = True
+            Left = 4
+            Top = 133
+            Width = 560
+            Height = 17
+            Margins.Top = 15
+            Align = alTop
+            AutoSize = False
+            Caption = #1048#1084#1103' '#1087#1088#1080#1085#1090#1077#1088#1072'/ '#1087#1086#1088#1090#1072' '
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 1
+          end
+          object cbPrinterName: TComboBox
+            Left = 1
+            Top = 153
+            Width = 300
+            Height = 24
+            Align = alTop
+            AutoComplete = False
+            Constraints.MaxWidth = 300
+            TabOrder = 2
+            Text = 'cbPrinterName'
+          end
+          object StaticText2: TStaticText
+            AlignWithMargins = True
+            Left = 4
+            Top = 192
+            Width = 560
+            Height = 20
+            Margins.Top = 15
+            Align = alTop
+            Caption = #1057#1082#1086#1088#1086#1089#1090#1100' COM '#1087#1086#1088#1090#1072
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 3
+          end
+          object cbBaudRate: TComboBox
+            Left = 1
+            Top = 215
+            Width = 100
+            Height = 24
+            Align = alTop
+            AutoCloseUp = True
+            Style = csDropDownList
+            Constraints.MaxWidth = 100
+            TabOrder = 4
+          end
+          object GroupBox1: TGroupBox
+            AlignWithMargins = True
+            Left = 4
+            Top = 242
+            Width = 560
+            Height = 105
+            Align = alTop
+            Caption = #1055#1072#1088#1072#1084#1077#1090#1088#1099' '#1087#1077#1095#1072#1090#1080
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = [fsBold]
+            ParentFont = False
+            TabOrder = 5
+            object StaticText4: TStaticText
+              Left = 8
+              Top = 22
+              Width = 67
+              Height = 20
+              Align = alCustom
+              AutoSize = False
+              Caption = #1055#1088#1086#1075#1086#1085#1103#1090#1100
+              Constraints.MaxWidth = 550
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 0
+            end
+            object edtFinishFeedCnt: TEdit
+              Left = 81
+              Top = 17
+              Width = 33
+              Height = 24
+              Align = alCustom
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              NumbersOnly = True
+              ParentFont = False
+              TabOrder = 1
+              Text = 'edtFinishFeedCnt'
+            end
+            object StaticText5: TStaticText
+              Left = 128
+              Top = 21
+              Width = 36
+              Height = 20
+              Align = alCustom
+              Caption = #1089#1090#1088#1086#1082
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 2
+            end
+            object StaticText6: TStaticText
+              Left = 9
+              Top = 55
+              Width = 66
+              Height = 20
+              Align = alCustom
+              Alignment = taRightJustify
+              AutoSize = False
+              Caption = #1040#1076#1088#1077#1089
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 3
+            end
+            object edtAddress: TEdit
+              Left = 81
+              Top = 47
+              Width = 453
+              Height = 24
+              Align = alCustom
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -13
+              Font.Name = 'Tahoma'
+              Font.Style = []
+              ParentFont = False
+              TabOrder = 4
+              Text = 'edtAddress'
+            end
+          end
+        end
+      end
+      object TabSheet3: TTabSheet
+        Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080' '#1088#1072#1089#1095#1077#1090#1086#1074
+        ImageIndex = 2
+        object Label5: TLabel
+          Left = 16
+          Top = 24
+          Width = 159
+          Height = 16
+          Caption = #1054#1082#1088#1091#1075#1083#1103#1090#1100' '#1089#1091#1084#1084#1091' '#1089#1082#1080#1076#1082#1080' '#1076#1086
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Label6: TLabel
+          Left = 231
+          Top = 24
+          Width = 44
+          Height = 16
+          Caption = #1079#1085#1072#1082#1086#1074' '
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object edtDiscountRoundTo: TEdit
+          Left = 181
+          Top = 16
+          Width = 44
+          Height = 24
+          Alignment = taCenter
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          NumbersOnly = True
+          ParentFont = False
+          TabOrder = 0
+          Text = '0'
+        end
+      end
+      object TabSheet4: TTabSheet
+        Caption = #1057#1086#1077#1076#1080#1085#1077#1085#1080#1077' '#1089' '#1089#1077#1088#1074#1077#1088#1086#1084
+        ImageIndex = 3
+        object edtDBName: TEdit
+          AlignWithMargins = True
+          Left = 3
+          Top = 41
+          Width = 562
+          Height = 24
+          Align = alTop
+          AutoSize = False
+          TabOrder = 0
+          Text = 'edtDBName'
+        end
+        object StaticText3: TStaticText
+          AlignWithMargins = True
+          Left = 3
+          Top = 15
+          Width = 562
+          Height = 20
+          Margins.Top = 15
+          Align = alTop
+          Caption = #1055#1091#1090#1100' '#1082' '#1073#1072#1079#1077' '#1076#1072#1085#1085#1099#1093
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = [fsBold]
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 397
+    Width = 578
+    Height = 48
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Align = alBottom
+    Caption = 'Panel2'
+    TabOrder = 1
+    object BitBtn1: TBitBtn
+      Left = 18
+      Top = 5
+      Width = 121
+      Height = 38
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Kind = bkOK
+      NumGlyphs = 2
+      TabOrder = 0
+      OnClick = BitBtn1Click
+    end
+    object BitBtn2: TBitBtn
+      Left = 427
+      Top = 4
+      Width = 116
+      Height = 38
+      Margins.Left = 2
+      Margins.Top = 2
+      Margins.Right = 2
+      Margins.Bottom = 2
+      Caption = #1054#1090#1084#1077#1085#1072
+      Kind = bkCancel
+      NumGlyphs = 2
+      TabOrder = 1
+    end
+  end
+end
